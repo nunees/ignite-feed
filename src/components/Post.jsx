@@ -15,7 +15,7 @@ export function Post() {
           </div>
         </div>
         <time title="11 de maio as 11:13" dateTime="2022-05-11 08:13:00">
-          Publicado 1h atras
+          Publicado há 1h atrás
         </time>
       </header>
       <div className={styles.content}>
@@ -31,6 +31,13 @@ export function Post() {
             </p>
         </p>
       </div>
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+        <textarea placeholder="Deixe um comentario"/>
+        <footer>
+        <button type="submit">Publicar</button>
+        </footer>
+      </form>
     </article>
   );
 }
