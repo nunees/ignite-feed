@@ -1,9 +1,10 @@
 import {Header} from "./components/Header"
-import {Post} from "./components/Post";
+import {Post, posts} from "./components/Post";
 
 import styles from "./App.module.css";
 import "./global.css";
 import { Sidebar } from "./components/Sidebar";
+
 
 function App() {
 
@@ -13,14 +14,14 @@ function App() {
     <div className={styles.wrapper}>
       <Sidebar />
       <main>
-        <Post
-          author="Felipe"
-          content="primeiro post" 
-        />
-        <Post
-          author="Felipe"
-          content="primeiro segundo" 
-        />
+        {posts.map(post => {
+          return (
+          <Post 
+          author={post.author} 
+          content={post.content} 
+          publishedAt={post.published_at}/>
+          )
+        })}
       </main>
     </div>
    </>
